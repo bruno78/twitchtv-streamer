@@ -2,14 +2,63 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Twitch.TV Streamer</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
     <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Black+Ops+One');
       html,body {height: 100%;}
       body {padding: 0px; margin:0px; background:url(image.jpg) ; background-position: center; background-size: cover; background-attachment: fixed; background-repeat: no-repeat;}
+      h3 {font-family: 'Black Ops One', cursive;}
+      .t-content { margin-top: 60px; }
+      .title { width: 40%;}
+      .description { width: 60%; }
+      .online { background-color: #4caf50 !important; }
+      .offline { background-color: #00b0ff !important; }
+      @media only screen and (min-width: 601px){
+        .t-content {
+            width: 50%;
+        }
+      }
     </style>
   </head>
   <body>
+    <div class="container z-depth-3 t-content">
+      <div class="row">
+        <div class="col s12">
+          <h3 class="center-align">Twitch Streamer</h3>
+        </div>
+        <div class="col s12">
+          <ul class="collection">
+            <li class="collection-item avatar valign-wrapper offline">
+              <img src="" alt="avatar image" class="circle">
+              <a href="#" class="title center-align">Free Code Camp</a>
+              <span class="description truncate center-align">Offline<span/>
+            </li>
+            <li class="collection-item avatar valign-wrapper online">
+              <img src="" alt="avatar image" class="circle">
+              <a href="#" class="title center-align">ESL_SC2</a>
+              <span class="description truncate center-align">StarCraft II: RERUN: qxc vs. Jason / Bioice vs. avilo - WCS Valencia Challenger NA - Qualifier #1<span/>
+            </li>
+            <li class="collection-item avatar valign-wrapper offline">
+              <img src="" alt="avatar image" class="circle">
+              <a href="#" class="title center-align">test_channel</a>
+              <span class="description truncate center-align">Offline<span/>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
 
     <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
