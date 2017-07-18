@@ -10,19 +10,20 @@ let liGenerator = (user, logo, infoStatus, status)=> {
           })
 }
 
-let search = ()=> {
-  let query = $('input').val().toLowerCase();
-  $('.collection li').each(()=> {
-    let name = $(this).find('#user').text().toLowerCase();
-    if (name.indexOf(query) === -1) {
-      $(this).addClass('filtered')
-    }
-    else {
-      $(this).removeClass('filtered')
-    }
-  })
+let changeState = (state)=> {
+  if(state === "online") {
+    $("li.offline").hide()
+    $("li.online").show()
+  }
+  if(state === "offline") {
+    $("li.online").hide()
+    $("li.offline").show()
+  }
+  if(state === "all") {
+    $("li.online").show()
+    $("li.offline").show()
+  }
 }
-
 
 $(document).ready(()=>{
   let listOfResults = []
@@ -57,6 +58,8 @@ $(document).ready(()=>{
   }) // .forEach
 
   $('ul.tabs').tabs()
-  $('input').keyup(search())
+  $('#all').on("click", ()=>{ changeState("all") })
+  $('#online').on("click", ()=>{ changeState("online") })
+  $('#offline').on("click", ()=>{ changeState("offline") })
 
 })

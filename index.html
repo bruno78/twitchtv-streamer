@@ -14,12 +14,16 @@
       html,body {height: 100%;}
       body {padding: 0px; margin:0px; background:url(image.jpg) ; background-position: center; background-size: cover; background-attachment: fixed; background-repeat: no-repeat;}
       h3 {font-family: 'Black Ops One', cursive;}
+      a {color: #1c5167;}
+      a:hover {color: #1788b7;}
       .t-content { margin-top: 60px; }
       .title { width: 40%;}
       .description { width: 60%; }
       .online { background-color: #4caf50 !important; }
       .offline { background-color: #00b0ff !important; }
-      .filtered { display: none; }
+      .tabs .indicator { height: 5px; }
+      .collection { margin-top: 0; }
+      .tabs.tabs-fixed-width { background-color: black; }
       @media only screen and (min-width: 601px){
         .t-content {
             width: 50%;
@@ -35,46 +39,16 @@
         </div>
         <div class="col s12">
           <ul class="tabs tabs-fixed-width">
-            <li class="tab col s3">All</li>
-            <li class="tab col s3">Online</li>
-            <li class="tab col s3">Offline</li>
+            <li class="tab col s3" id="all"><a href="#">All</a></li>
+            <li class="tab col s3" id="online"><a href="#">Online</a></li>
+            <li class="tab col s3" id="offline"><a href="#">Offline</a></li>
           </ul>
-        </div>
-        <div class="input-field col s12">
-          <i class="material-icons prefix">search</i>
-          <input id="search" class="validate">
-          <label for="icon_search">Search</label>
         </div>
         <div id="listing" class="col s12">
           <ul class="collection"></ul>
-          <!--
-          <ul class="collection">
-            <li class="collection-item avatar valign-wrapper offline">
-              <img src="" alt="avatar image" class="circle">
-              <a href="#" class="title center-align">Free Code Camp</a>
-              <span class="description truncate center-align">Offline<span/>
-            </li>
-            <li class="collection-item avatar valign-wrapper online">
-              <img src="" alt="avatar image" class="circle">
-              <a href="#" id="user" class="title center-align">ESL_SC2</a>
-              <span id="info" class="description truncate center-align">StarCraft II: RERUN: qxc vs. Jason / Bioice vs. avilo - WCS Valencia Challenger NA - Qualifier #1<span/>
-            </li>
-            <li class="collection-item avatar valign-wrapper offline">
-              <img src="" alt="avatar image" class="circle">
-              <a href="#" class="title center-align">test_channel</a>
-              <span class="description truncate center-align">Offline<span/>
-            </li>
-          </ul> -->
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
     <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
